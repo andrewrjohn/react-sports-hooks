@@ -13,7 +13,7 @@ npm install --save react-sports-hooks
 ## Usage
 
 ```tsx
-import React, { Component } from 'react'
+import React from 'react'
 
 import { useScores } from 'react-sports-hooks'
 
@@ -31,6 +31,22 @@ const MyComponent = () => {
 You can pass in an options object as the second arg when you instantiate `useScores` that can take the following options:
 
 - `updateIntervalSeconds` (number): How often the data is refreshed, default is 30 seconds.
+
+### Example with Options
+
+```tsx
+import React from 'react'
+
+import { useScores } from 'react-sports-hooks'
+
+const MyComponent = () => {
+  const { scores } = useScores("mlb", { updateIntervalSeconds: 3 })
+
+    return (
+      ...
+    )
+}
+```
 
 ## License
 
