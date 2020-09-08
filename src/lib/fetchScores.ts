@@ -40,6 +40,8 @@ export async function fetchScores(sport: 'mlb' | 'nba' | 'nfl') {
     const away = competitions[0].competitors.find(
       (team: any) => team.homeAway === 'away'
     )
+    const situation = competitions[0].situation
+
     delete home.team.links
     delete home.team.uid
     delete home.team.id
@@ -59,6 +61,7 @@ export async function fetchScores(sport: 'mlb' | 'nba' | 'nfl') {
           shortDetail: status.type.shortDetail,
           completed: status.type.completed
         },
+        situation,
         teams: {
           awayTeam: {
             ...away.team,
