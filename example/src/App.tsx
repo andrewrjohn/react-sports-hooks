@@ -1,10 +1,11 @@
 import React from 'react'
-
-import { ExampleComponent } from 'react-sports-hooks'
+import { useScores } from 'react-sports-hooks'
 import 'react-sports-hooks/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  const { scores } = useScores('mlb')
+  console.log(scores)
+  return <div>{JSON.stringify(scores, null, 4)}</div>
 }
 
 export default App
