@@ -1,6 +1,6 @@
-# react-sports-hooks
+# React Sports Hooks
 
-> React hooks for sports scores.
+> React hooks for live sports scores.
 
 [![NPM](https://img.shields.io/npm/v/react-sports-hooks.svg)](https://www.npmjs.com/package/react-sports-hooks) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -15,13 +15,14 @@ npm install --save react-sports-hooks
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-sports-hooks'
-import 'react-sports-hooks/dist/index.css'
+import { useScores } from 'react-sports-hooks'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const MyComponent = () => {
+  const { scores } = useScores("mlb")
+
+    return (
+      ...
+    )
 }
 ```
 
