@@ -1,7 +1,7 @@
 {
   "name": "react-sports-hooks",
-  "version": "1.0.0",
-  "description": "React hooks for sports scores.",
+  "version": "1.1.0",
+  "description": "React hooks for live sports scores.",
   "author": "andrewrjohn",
   "license": "MIT",
   "repository": "andrewrjohn/react-sports-hooks",
