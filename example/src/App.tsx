@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useScores } from 'react-sports-hooks'
 import 'react-sports-hooks/dist/index.css'
 
 const App = () => {
-  const { scores } = useScores('mlb')
+  const [sport, setSport] = useState<'mlb' | 'nba' | 'nfl'>('mlb')
+  const { scores } = useScores(sport, { updateIntervalSeconds: 5 })
   console.log(scores)
-  return <div>check console</div>
+  return (
+    <div>
+      check console
+      <button onClick={() => setSport('mlb')}>mlb</button>
+      <button onClick={() => setSport('nfl')}>nfl</button>
+      <button onClick={() => setSport('nba')}>nba</button>
+    </div>
+  )
 }
 
 export default App

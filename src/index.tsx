@@ -18,7 +18,12 @@ export const useScores = (sport: Sport, options?: Options) => {
     }
 
     getSport()
-    setInterval(getSport, 1000 * updateIntervalSeconds)
+
+    const refreshInterval = setInterval(getSport, 1000 * updateIntervalSeconds)
+
+    return () => {
+      clearInterval(refreshInterval)
+    }
   }, [sport])
 
   return {
