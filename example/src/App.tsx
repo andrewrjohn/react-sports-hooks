@@ -5,7 +5,7 @@ import 'react-sports-hooks/dist/index.css'
 const App = () => {
   const [sport, setSport] = useState<'mlb' | 'nba' | 'nfl'>('mlb')
   const { scores } = useScores(sport, { updateIntervalSeconds: 5 })
-  console.log(scores)
+
   return (
     <div>
       check console
