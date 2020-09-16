@@ -1,6 +1,6 @@
 {
   "name": "react-sports-hooks",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "React hooks for live sports scores.",
   "author": "andrewrjohn",
   "license": "MIT",
@@ -11,6 +11,12 @@
   "engines": {
     "node": ">=10"
   },
+  "keywords": [
+    "react",
+    "hooks",
+    "javascript",
+    "sports"
+  ],
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
