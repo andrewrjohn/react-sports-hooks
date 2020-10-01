@@ -26,7 +26,13 @@ const MyComponent = () => {
 }
 ```
 
-## Options
+## Parameters
+
+**REQUIRED**
+
+- `sport` ("mlb" | "nba" | "nfl" | "ncaam" | "ncaaf")
+
+**OPTIONAL**:
 
 You can pass in an options object as the second arg when you instantiate `useScores` that can take the following options:
 
